@@ -3,46 +3,44 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Create your own Yoga Practice</title>
+    <title>WJ Create Yoga Sequences</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+<!-- Bootstrap Core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- <! Custom CSS --> 
- <link href="../assets/css/business-casual.css" rel="stylesheet">
+    <link href="../assets/css/business-casual.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
 <!-- JQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-<!-- Bootstrap Core CSS -->
-<!--     <link href="../assets/css/bootstrap.min.css" rel="stylesheet"> -->
+
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
   <style type="text/css">
-      body {
+        body {
         color: #666666;
 /*        background-color: #f9f8f6;*/
-        background-image: url("../assets/images/bg1.jpg");
+        background-image: url("../assets/images/RainbowMountain.jpg");
         background-position: center;
         font-family: Georgia, Times, serif;
         line-height: 1.4em;
         margin: 0px;}
-      .wrapper {
-        width: 940px;
-        margin: 5px auto 20px auto;
-/*        border: 2px solid #000000;*/
-        background-color: inherit;
-        background:  ;}
-/*      header {
+        .nav-header {
         height: 50px;
-        width: 50;
-        background:  url(../assets/images/zen_yoga.jpg) no-repeat top left;*/
+        width: 50px;
+        padding: 10px;
+        background:  url(../assets/images/zen_yoga.jpg) no-repeat top left;
         }
-/*          wj-sub-header {
-        height: 50px;
-        width: 50;
-        padding-left: 40px;
+/*      wj-sub-header {
+        height: 0px;
+        width: 0px;
+        padding: 0px;
         }*/
-    </style>    
+    </style>
 
 <!-- Javascript -->
     <script type="text/javascript">
@@ -112,22 +110,45 @@ function getSunSalutationsYogaVideo()
     }// for loop
 }// function
 
-</script>
+//Get ther Yoga Video
+function getOtherYogaVideo()
+{
+  var otherYogaSeq = ['https://www.google.com'];
 
+  for (i=0; i < otherYogaSeq.length; i++)
+  {       if (document.getElementById('yoga_pose5').value == i)
+         {
+         document.getElementById('displayVideo5').innerHTML = '<iframe width="560" height="315" src="'+otherYogaSeq[i]+'" frameborder="0" allowfullscreen></iframe>';
+          } // if 
+    }// for loop
+}// function
+
+</script>
 </head>
 
 <body>
-<header>
-<nav role = 'top-menu-bar'>
-    <div class='wj-header'><a href="assets/images/zen_yoga_symbol.jpg no-repeat top left" font="italics"</a></div>
-      <li role="presentation"><a href="index.html">Wellness Journey</a></li>
-      <li role="presentation"><a href="index.html">Home</a></li>
-      <li role="presentation"><a href="all_about_wj.html">About</a></li>
-      <li role="presentation"><a href="contact.html#">Contact</a></li><br><br><br>
-  </nav>
-</header><br><br><br>
 
-  <nav class="navbar navbar-transparent">
+<nav ='top-menu-bar'>
+  <div class='nav-header'><a href="" font="italics"</a></div>
+    <li role="presentation"><a href="">Wellness Journey</a></li>
+    <li role="presentation"><a href="../public/index.html">Home</a></li>
+    <li role="presentation"><a href="../public/all_about_wj.html">About</a></li>
+    <li role="presentation"><a href="../public/contact.html#">Contact</a></li><br><br><br>
+</div>
+</nav>
+<div class='wj-sub-header'>
+  <header>
+    <h1>Wellness Journey</h1>
+      <center>
+        <a href="../public/yoga_learn_poses.html">Read About Yoga Poses</a>
+        <a href="../public/yoga_create.html">Practice Yoga Poses</a>
+        <a href="../public/yoga_videos.html">Do Yoga Videos</a>
+        <a href="../public/yoga_restore.html">Restore/Rejuvenate</a>
+      </center>
+  </header>
+</div><br><br><br><br><br><br>
+
+<nav class="navbar navbar-transparent">
   <h2 class="initialHeader"><center>Begin Your Wellness Journey!</h2></center>
   <h2><center>Choose individual poses to create-your-own Sequence</h2>
 </center>
@@ -187,33 +208,27 @@ function getSunSalutationsYogaVideo()
     </select><br><br>
 <div id="displayVideo4"></div>
 
-<p>Search for other Yoga Videos</p>
-<!-- <select id="yoga_pose5" onChange="getYogaVideo()"> -->
-  <input type="text" class="form-control" placeholder="Search">
 
-<!--      <option value="null">Select Pose</option> -->
-<!--      <option value="0">Other</option> -->
-  
-<!--       <input type="text" val="" class="userInput" placeholder="Search"> -->
-    </select><br><br>
+<p>Search for other Yoga Videos</p>
+<!-- <h2> Search box </h2> -->
+<script type="text/javascript">
+    function link() {
+        var link_s = document.getElementById('link_id').value;
+        document.getElementById('link_str').innerHTML = link_s.link()
+    }
+<input type='text' id='link_id'>
+<input type='button' id='link_str' class="custButt btn btn-primary btn-lg"value='Search' onClick='link()'>
+<select id="yoga_pose5" onChange="getOtherYogaVideo()">
+<option value="null">Select Pose</option>
+</select><br>
 <div id="displayVideo5"></div>
-<!-- 
-        <li><input type="radio" name="other" value="all" class="otherButton">  Other</li>
-        <li><input type="text" val="" class="userInput" placeholder="Search"></li> -->
-  <ul>
+
+ // <input type="text" class="form-control" placeholder="Search">
+</script>
 </form>
 
-<!--       <a href="yoga_poses.html"<button type="button" class="custButt btn btn-primary btn-lg" style="background-color: ltblue !important"><span class="glyphicon glyphicon-apple"></span>Individual Poses</button></a>
-      
-      <a href="http://www3.yogajournal.com/poses/sequence_builder"<button type="button" class="custButt btn btn-primary btn-lg" style="background-color: ltblue !important"> 
-      <span class="glyphicon glyphicon-apple"></span>Customize
-      </button></a> -->
-
 </div>
-
-
 </div>
-
 
 
 </body>
