@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>WJ Yoga Poses</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- <! Custom CSS --> 
+    <link href="css/business-casual.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+<!-- JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- Javascript -->
+    <script type="text/javascript">
+
+
+<!-- //Get Yoga Pose diagram and info  -->
+function getYogaPoseDiagram()
+{
+  var sunSalutationsYogaSeq = ["https://www.youtube.com/embed/y9sxkuSgV6M",];
+
+  for (i=0; i < sunSalutationsYogaSeq.length; i++)
+  {       if (document.getElementById('yoga_pose4').value == i)
+         {
+         document.getElementById('displayVideo4').innerHTML = '<iframe width="560" height="315" src="'+sunSalutationsYogaSeq[i]+'" frameborder="0" allowfullscreen></iframe>';
+          } // if 
+    }// for loop
+}// function
+
+
+getYogaPoseDiagram
+
+call individual poses , pose 1, pose 2 ,etc
+
+
+</script>
+</head>
+
+<body>
+<header>
+      <nav class="navbar navbar-transparent">
+          <div class="navbar-header-right" color: black>
+          <a href="index.html">Home</a>
+          <a href="contact.html">Contact</a>
+  </header>        
+<!-- 
+<div class="container-page2">
+      <div class="header clearfix-page2">
+        <table role="grid" style="margin-left: auto; margin-right: auto; width: 99%;">
+            <table border ="1" style="width:100" background: "plum">
+            <thead>
+                <tr>
+                <th>English Name</th>
+                <th>Sanscrit Name</th>
+                <th>Position Type</th>
+                </tr>
+            </table>
+  </div> -->
+<!-- <div>
+    <tr>
+    <td><a href="#Tadasana">Tadasana</a></td><br />
+    <td><a href="#Cat/Cow">Cat/Cow</a></td><br />
+    <td><a href="#Bridge">Bridge</a></td><br />
+  </tr>
+</div> -->
+
+<div id="radioButtonz">
+      <!-- <form action="action_page.php" method="get"> -->
+      <form id="Demo1">
+        <div class="poses">
+        <h3 class="text-muted">Yoga Poses</h3>
+          <label id="duration" for="radio">Choose a pose</label>
+
+          <ul class="nav nav-pills nav-stacked">
+                <input type="checkbox" value="catCow"/> Cat/Cow <br />
+                <input type="checkbox" value="bridge"/> Bridge <br />
+                <input type="checkbox" value="cobra"/> Cobra <br />
+                <input type="checkbox" value="downwardDog"/> Downward Dog <br />
+                <input type="checkbox" value="toeTouch"/> Toe Touch <br />
+                <input type="checkbox" value="spinalTwist"/> Spinal Twist <br />
+                <input type="checkbox" value="relaxation"/> Relaxation <br />
+                <input type="checkbox" value="prayer"/> Prayer Pose <br />
+                <input type="checkbox" value="other"<a href="www.google.com">Search Yoga Videos</a>
+<!--             <li><input type="radio" name="other" value="all" class="otherButton">  Other</li> -->
+            <li><input type="text" val="" class="userInput" placeholder="Search"></li>
+          </ul>
+      </form>
+    </div>
+</div>
+
+<!--        <li><input type="radio" name="easyPoseTwist" /> Easy Pose with a Twist</li>
+            <li><input type="radio" name="mountainPose" /> Mountain Pose </li>
+            <li><input type="radio" name="childsPose" /> Child's Pose </li>
+            <li><input type="radio" name="corpsePose" />  Corpse Pose</li>
+            <li><input type="radio" name="downwardFacingDogPose" />  Relaxation Pose</li>
+ -->            
+
+<!-- 
+    <input type="checkbox" id="Tadasana" value="Tadasana"/> 
+    <a href="https://www.youtube.com/watch?v=l9dW5Nn8XjU&list=PLD5851A7AC270AE5B">Tadasana/Mountain Pose</a><br /> -->
+
+<script src="app.js"></script>
+
+</body>
+</html>
+

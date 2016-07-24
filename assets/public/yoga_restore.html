@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Restore Yoga Sequence Poses</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- <! Custom CSS --> 
+    <link href="css/business-casual.css" rel="stylesheet">
+
+<!-- JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- Javascript -->
+    <script type="text/javascript">
+
+//Get Yoga Relaxation videos
+function getRelaxationYogaVideo()
+{
+  var relaxationYogaSeq = ['https://www.youtube.com/embed/ti3tbscESUY', "https://www.youtube.com/embed/TV7jjlsWi44", 'https://www.youtube.com/embed/mIz8uc9eTo4', 'https://www.youtube.com/embed/v1IkTK16XUQ']; 
+
+  for (i=0; i < relaxationYogaSeq.length; i++)
+  {       if (document.getElementById('yoga_pose6').value == i)
+         {
+
+         document.getElementById('displayVideo6').innerHTML = '<iframe width="560" height="315" src="'+relaxationYogaSeq[i]+'" frameborder="0" allowfullscreen></iframe>';
+          } // if 
+    }// for loop
+}// function
+
+</script>
+</head>
+<body>
+
+<header><center>
+      <nav class="navbar navbar-transparent">
+      <div class="navbar-header-right" color: black>
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+      
+</center></header>
+
+<div class="login">
+      <h1>Login to Wellness Journey App</h1>
+      <form method="post" action="/login">
+        <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
+        <p><input type="password" name="password" value="" placeholder="Password"></p>
+        <p class="remember_me">
+          <label>
+            <input type="checkbox" name="remember_me" id="remember_me">
+            Remember me on this computer
+          </label>
+        </p>
+        <p class="submit"><input type="submit" name="commit" value="Login"></p>
+      </form>
+    </div>
+    <div class="container-fluid"><center>
+        <h2 class="initialHeader">Complete Your Wellness Journey</h2>
+        <h2 class="youtubeLinks">With Sequences to Restore and Rejuvinate</h2>
+
+      <!-- use a form handler to connect with you tube server via the action attribute-->
+      <div id="radioButtons">
+
+      <form id="Demo">
+          <label id="duration" for="radio"><h4>Follow the sequence to wind down and relax</h4></label>
+          <ul class="nav nav-pills nav-stacked">
+            <p>Relaxation Sequences</p>
+                <select id="yoga_pose6" onChange="getRelaxationYogaVideo()">
+                 <option value="null">Select Pose</option>
+                  <option value="0">1. Bound Angle Pose</option>
+                  <option value="1">2. Head-of-the-knee Pose - Janu Sirsasana</option>
+                  <option value="2">3. Child's Pose</option>
+                  <option value="3">4. Corpse - Shavasana Pose</option>
+                </select><br><br>
+            <div id="displayVideo6"></div>
+
+          </ul>
+      </form>
+      </div>
+    </div>
+
+
+      <script src="app.js"></script>
+  </body>
+</html>
