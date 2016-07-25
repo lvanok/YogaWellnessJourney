@@ -34,9 +34,11 @@ var users_controller = require('./controllers/users_controller.js');
 var yoga_controller = require('./controllers/yoga_controller.js');
 
 app.use('/', application_controller);
-app.use('/cats', cats_controller);
+
 app.use('/users', users_controller);
 app.use('/', yoga_controller);
+
+
 
 var port = 3000;
 app.listen(port);
