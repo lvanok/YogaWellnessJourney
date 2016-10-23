@@ -8,7 +8,7 @@
     <title>WJ Relax Yoga Sequence</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
 
-<!-- <! Custom CSS --> 
+<!-- <! Custom CSS -->
     <link href="../assets/css/business-casual.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
@@ -34,11 +34,7 @@
         padding: 10px;
         background:  url(../assets/images/zen_yoga.jpg) no-repeat top left;
         }
-/*      wj-sub-header {
-        height: 0px;
-        width: 0px;
-        padding: 0px;
-        }*/
+
     </style>
 
 
@@ -48,14 +44,14 @@
 //Get Yoga Relaxation videos
 function getRelaxationYogaVideo()
 {
-  var relaxationYogaSeq = ['https://www.youtube.com/embed/ti3tbscESUY', "https://www.youtube.com/embed/TV7jjlsWi44", 'https://www.youtube.com/embed/mIz8uc9eTo4', 'https://www.youtube.com/embed/v1IkTK16XUQ']; 
+  var relaxationYogaSeq = ['https://www.youtube.com/embed/ti3tbscESUY', "https://www.youtube.com/embed/TV7jjlsWi44", 'https://www.youtube.com/embed/mIz8uc9eTo4', 'https://www.youtube.com/embed/v1IkTK16XUQ'];
 
   for (i=0; i < relaxationYogaSeq.length; i++)
   {       if (document.getElementById('yoga_pose6').value == i)
          {
 
          document.getElementById('displayVideo6').innerHTML = '<iframe width="560" height="315" src="'+relaxationYogaSeq[i]+'" frameborder="0" allowfullscreen></iframe>';
-          } // if 
+          } // if
     }// for loop
 }// function
 
@@ -111,6 +107,10 @@ function getRelaxationYogaVideo()
       </div>
     </div>
 
-
+<div class="footer">
+  <footer>
+    &copy; 2016 Lisa VanOrden-Kaan
+  </footer>
+</div>
   </body>
 </html>

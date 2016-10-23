@@ -11,7 +11,7 @@
 <!-- Bootstrap Core CSS -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- <! Custom CSS --> 
+<!-- <! Custom CSS -->
     <link href="../assets/css/business-casual.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
@@ -34,11 +34,7 @@
         padding: 10px;
         background:  url(../assets/images/zen_yoga.jpg) no-repeat top left;
         }
-/*      wj-sub-header {
-        height: 0px;
-        width: 0px;
-        padding: 0px;
-        }*/
+
     </style>
 
 <!-- Javascript -->
@@ -47,14 +43,14 @@
 //Get Yoga Intro videos
 function getYogaVideo()
 {
-  var introYogaSeq = ['https://www.youtube.com/embed/l9dW5Nn8XjU', 'https://www.youtube.com/embed/C6XoYAVLKkM', 'https://www.youtube.com/embed/JmW6Ofblhtk', 'https://www.youtube.com/embed/mIz8uc9eTo4']; 
+  var introYogaSeq = ['https://www.youtube.com/embed/l9dW5Nn8XjU', 'https://www.youtube.com/embed/C6XoYAVLKkM', 'https://www.youtube.com/embed/JmW6Ofblhtk', 'https://www.youtube.com/embed/mIz8uc9eTo4'];
 
   for (i=0; i < introYogaSeq.length; i++)
   {       if (document.getElementById('yoga_pose').value == i)
          {
 
          document.getElementById('displayVideo').innerHTML = '<iframe width="560" height="315" src="'+introYogaSeq[i]+'" frameborder="0" allowfullscreen></iframe>';
-          } // if 
+          } // if
     }// for loop
 }// function
 
@@ -67,7 +63,7 @@ function getStandingYogaVideo()
   {       if (document.getElementById('yoga_pose1').value == i)
          {
          document.getElementById('displayVideo1').innerHTML = '<iframe width="560" height="315" src="'+standingYogaSeq[i]+'" frameborder="0" allowfullscreen></iframe>';
-          } // if 
+          } // if
     }// for loop
 }// function
 //Get Core Yoga Pose Videos
@@ -79,7 +75,7 @@ function getCoreYogaVideo()
   {       if (document.getElementById('yoga_pose2').value == i)
          {
          document.getElementById('displayVideo2').innerHTML = '<iframe width="560" height="315" src="'+coreYogaSeq[i]+'" frameborder="0" allowfullscreen></iframe>';
-          } // if 
+          } // if
     }// for loop
 }// function
 //Get Back Pain Yoga Sequence Videos
@@ -92,7 +88,7 @@ function getbackPainYogaVideo()
          {
 
          document.getElementById('displayVideo3').innerHTML = '<iframe width="560" height="315" src="'+backPainYogaSeq[i]+'" frameborder="0" allowfullscreen></iframe>';
-          } // if 
+          } // if
     }// for loop
 }// function
 
@@ -105,7 +101,7 @@ function getSunSalutationsYogaVideo()
   {       if (document.getElementById('yoga_pose4').value == i)
          {
          document.getElementById('displayVideo4').innerHTML = '<iframe width="560" height="315" src="'+sunSalutationsYogaSeq[i]+'" frameborder="0" allowfullscreen></iframe>';
-          } // if 
+          } // if
     }// for loop
 }// function
 
@@ -118,7 +114,7 @@ function getOtherYogaVideo()
   {       if (document.getElementById('yoga_pose5').value == i)
          {
          document.getElementById('displayVideo5').innerHTML = '<iframe width="560" height="315" src="'+otherYogaSeq[i]+'" frameborder="0" allowfullscreen></iframe>';
-          } // if 
+          } // if
     }// for loop
 }// function
 
@@ -212,7 +208,11 @@ function getOtherYogaVideo()
 
 </div>
 </div>
-
+<div class="footer">
+  <footer>
+    &copy; 2016 Lisa VanOrden-Kaan
+  </footer>
+</div>
 
 </body>
 </html>
