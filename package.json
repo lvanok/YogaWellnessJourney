@@ -1,7 +1,7 @@
 {
-  "name": "yoga-with-login",
+  "name": "yogawellnessjourney",
   "version": "1.0.0",
-  "description": "",
+  "description": "Yoga for Wellness",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -16,6 +16,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Lisa VanOrden-Kaan <lmvanorden@gmail.com> (http://lisavanordenkaan.com/)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvanok/YogaWellnessJourney.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lvanok/YogaWellnessJourney/issues"
+  },
+  "homepage": "https://github.com/lvanok/YogaWellnessJourney#readme"
 }
